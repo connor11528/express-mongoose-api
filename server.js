@@ -1,5 +1,4 @@
-
-var express = require('express'),
+const express = require('express'),
 	mongoose = require('mongoose'),
 	bodyParser = require('body-parser'),
 	cookieParser = require('cookie-parser'),
@@ -8,10 +7,13 @@ var express = require('express'),
 	app = express();
 
 // ENVIRONMENT CONFIG
-var env = process.env.NODE_ENV = process.env.NODE_ENV || 'development',
+const env = process.env.NODE_ENV = process.env.NODE_ENV || 'development',
 	envConfig = require('./server/env')[env];
 
-mongoose.connect(envConfig.db);
+require('./database');
+
+// hack to use async-await in controllers
+require('express-async-errors');
 
 // EXPRESS CONFIG
 app.use(bodyParser.json());

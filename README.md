@@ -1,4 +1,4 @@
-mean-starter
+MongoDB Mongoose Relationships
 =====
 
 > This is a lightweight starter boilerplate for getting started with MEAN stack apps (MongoDB, Express, Angular, Node.js). In it you can configure environment variables, define models and set up api routes. It is lightweight and much easier to grok than mean.io or mean.js.
