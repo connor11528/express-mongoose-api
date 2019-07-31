@@ -10,7 +10,7 @@ MongoDB Mongoose Relationships
 $ git clone <this_repo_url>
 $ cd mean-starter
 $ npm install
-$ nodemon server
+$ npm run start
 ```
 
 ### Deploy to Heroku

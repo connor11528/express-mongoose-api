@@ -1,7 +1,9 @@
 const AuthorsController = require('./AuthorsController');
-const BlogPostController = require('./BlogPostController');
+const BooksController = require('./BooksController');
+const HomeController = require('./HomeController');
 
 module.exports = {
+	HomeController,
 	AuthorsController,
-	BlogPostController,
+	BooksController,
 };

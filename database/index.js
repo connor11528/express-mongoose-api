@@ -6,17 +6,14 @@ mongoose.Promise = require('bluebird');
 mongoose.connect(envConfig.db, { useMongoClient: true, });
 
 // CONNECTION EVENTS
-// When successfully connected
 mongoose.connection.on('connected', function () {  
-  console.log('Mongoose default connection open to ' + mongoose.connection.host + ' ' + mongoose.connection.name);
+  console.log(`Database connection open to ${mongoose.connection.host} ${mongoose.connection.name}`);
 }); 
 
-// If the connection throws an error
 mongoose.connection.on('error',function (err) {  
   console.log('Mongoose default connection error: ' + err);
 }); 
 
-// When the connection is disconnected
 mongoose.connection.on('disconnected', function () {  
   console.log('Mongoose default connection disconnected'); 
 });

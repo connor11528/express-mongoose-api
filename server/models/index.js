@@ -1,5 +1,5 @@
 
 module.exports = {
 	'Author': require('./Author'),
-	'BlogPost': require('./BlogPost'),
+	'Book': require('./Book'),
 };

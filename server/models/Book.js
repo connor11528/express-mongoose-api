@@ -1,14 +1,11 @@
 const mongoose = require('mongoose');
 
-const blogPostModel = mongoose.Schema({
+const bookModel = mongoose.Schema({
   title: { 
   	type: String, 
   	required: '{PATH} is required!'
   },
   subtitle: {
-  	type: String
-  },
-  twiiter_url: {
   	type: String
   },
   author: { 
@@ -19,4 +16,4 @@ const blogPostModel = mongoose.Schema({
   timestamps: true
 });
 
-module.exports = mongoose.model('BlogPost', blogPostModel);
+module.exports = mongoose.model('Book', bookModel);

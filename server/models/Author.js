@@ -8,11 +8,11 @@ const authorModel = mongoose.Schema({
   bio: {
   	type: String
   },
-  twiiter_url: {
+  website: {
   	type: String
   },
-  posts: [
-    { type: mongoose.Schema.Types.ObjectId, ref: 'Story' }
+  books: [
+    { type: mongoose.Schema.Types.ObjectId, ref: 'Book' }
   ]
 }, {
   timestamps: true
