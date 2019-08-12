@@ -18,5 +18,25 @@ async function seedAuthors() {
   console.log('authors: ', a);
 }
 
+async function seedBooks() {
+  console.log('Seeding books to ' + mongoose.connection.name + '...');
+
+  const jkRowling = await Author.findOne({ name: 'JK Rowling' });
+  const tonyRobbins = await Author.findOne({ name: 'Tony Robbins' });
+
+  let harryPotter = new Book({ title: 'Harry Potter', author: jkRowling._id });
+  let awakenGiant = new Book({ title: 'Awaken the Giant Within', author: tonyRobbins._id });
+
+  await harryPotter.save();
+  await awakenGiant.save();
+
+  jkRowling.books.push(harryPotter);
+  tonyRobbins.books.push(awakenGiant);
+
+  await jkRowling.save();
+  await tonyRobbins.save();
+}
+
 seedAuthors();
+seedBooks();
 
